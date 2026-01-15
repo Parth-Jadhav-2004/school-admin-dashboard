@@ -81,6 +81,12 @@ const InlineArrowLeft = ({ className = "w-5 h-5" }) => (
   </svg>
 );
 
+const DownloadIcon = ({ className = "w-4 h-4" }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+  </svg>
+);
+
 function Footer() {
   return (
     <footer className="max-w-7xl mx-auto mt-12 mb-6 text-center text-[11px] text-black font-medium space-y-6">
@@ -183,7 +189,7 @@ function DashboardModule({ onNavigate }: { onNavigate: (module: "applications" |
           </div>
 
           <button className="bg-[#fbbf24] hover:bg-amber-400 text-black px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 shadow-sm transition-colors">
-            <Download className="w-4 h-4" />
+            <DownloadIcon className="w-4 h-4" />
             Download Report
           </button>
         </div>
@@ -489,11 +495,11 @@ function ApplicationHeader({ applicationStatus, setApplicationStatus, reviewStat
 
         <div className="flex items-center gap-3">
           <button className="px-4 py-2 bg-[#fbbf24] hover:bg-amber-400 text-black font-bold text-sm rounded-lg transition-colors shadow-sm flex items-center gap-2">
-            <Download className="w-4 h-4" />
+            <DownloadIcon className="w-4 h-4" />
             Download Original Pdf
           </button>
           <button className="px-4 py-2 bg-[#fbbf24] hover:bg-amber-400 text-black font-bold text-sm rounded-lg transition-colors shadow-sm flex items-center gap-2">
-            <Download className="w-4 h-4" />
+            <DownloadIcon className="w-4 h-4" />
             Download Pdf
           </button>
         </div>
